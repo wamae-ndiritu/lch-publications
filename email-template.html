@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>New Contact Form Submission</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #f4f4f4;
+            margin: 0;
+            padding: 0;
+        }
+        .container {
+            max-width: 600px;
+            margin: 20px auto;
+            background: #ffffff;
+            border-radius: 10px;
+            padding: 20px;
+            box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.1);
+        }
+        .header {
+            background-color: #0f766e;
+            padding: 20px;
+            border-top-left-radius: 10px;
+            border-top-right-radius: 10px;
+            text-align: center;
+        }
+        .header h2 {
+            color: #ffffff;
+            margin: 0;
+        }
+        .content {
+            padding: 20px;
+            color: #333333;
+        }
+        .content p {
+            margin: 10px 0;
+            font-size: 16px;
+        }
+        .footer {
+            background-color: #e2e8f0;
+            text-align: center;
+            padding: 10px;
+            font-size: 14px;
+            border-bottom-left-radius: 10px;
+            border-bottom-right-radius: 10px;
+            color: #333333;
+        }
+        .btn {
+            display: inline-block;
+            padding: 10px 20px;
+            background-color: #0f766e;
+            color: #ffffff;
+            text-decoration: none;
+            border-radius: 5px;
+            font-size: 16px;
+            margin-top: 10px;
+        }
+        .btn:hover {
+            background-color: #0c5c55;
+        }
+    </style>
+</head>
+<body>
+
+    <div class="container">
+        <!-- Header -->
+        <div class="header">
+            <h2>New Contact Form Submission</h2>
+        </div>
+
+        <!-- Content -->
+        <div class="content">
+            <p><strong>Name:</strong> {{name}}</p>
+            <p><strong>Email:</strong> {{email}}</p>
+            <p><strong>Message:</strong></p>
+            <p>{{message}}</p>
+
+            <a href="mailto:{{email}}">Reply to {{name}}</a>
+        </div>
+
+        <!-- Footer -->
+        <div class="footer">
+            <p>&copy; 2025 LCH Publications. All Rights Reserved.</p>
+        </div>
+    </div>
+
+</body>
+</html>

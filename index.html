@@ -1,0 +1,524 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>LCH Publications</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css" />
+    <link rel="apple-touch-icon" sizes="180x180" href="/assets/apple-touch-icon.png">
+    <link rel="icon" type="image/png" sizes="32x32" href="/assets/favicon-32x32.png">
+    <link rel="icon" type="image/png" sizes="16x16" href="/assets/favicon-16x16.png">
+    <link rel="manifest" href="/assets/site.webmanifest">
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet" />
+    <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+    <style>
+        @font-face {
+            font-family: "Papyrus";
+            src: url('/assets/fonts/papyrus-font-1739148449-0/papyrus.ttf');
+            font-weight: normal;
+            font-style: normal;
+        }
+        html {
+            scroll-behavior: smooth;
+        }
+
+        body {
+            font-family: 'Papyrus', sans-serif;
+            letter-spacing: 2px;
+        }
+
+        .mobile-menu {
+            display: flex;
+            background-color: white;
+            flex-direction: column;
+            position: absolute;
+            right: 0;
+            left: 0;
+            top: 56px;
+            z-index: 999;
+            padding-bottom: 20px;
+            /* add transition on height */
+            transition: height 0.3s ease-in-out;
+        }
+
+        .mobile-menu li {
+            padding: 10px 20px;
+            border-bottom: 1px solid #f1f1f1;
+        }
+
+        .custom-teal {
+            color: #14B2BE;
+        }
+
+        .bg-custom-teal {
+            background-color: #14B2BE;
+        }
+    </style>
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    colors: {
+                        teal: {
+                            900: '#14B2BE',
+                            700: '#14B2BE'
+
+                        },
+                    }
+                }
+            }
+        }
+    </script>
+</head>
+
+<body class="relative bg-gray-100 text-gray-900 overflow-x-hidden relative">
+    <!-- Navigation Bar -->
+    <nav class="pr-4 md:px-6 bg-white shadow-lg flex items-center justify-between">
+        <!-- Logo -->
+        <a href="index.html" class="flex items-center bg-white px-2 py-2 md:px-0 rounded-full">
+            <img src="/assets/lch-publications-log-removebg.png" alt="LCH Publications Logo"
+                class="h-10 w-auto object-fit" />
+            <span class="custom-teal text-md md:text-xl font-bold ml-2">LCH Publications</span>
+        </a>
+
+        <!-- Hamburger Icon (Mobile) -->
+        <button id="menu-toggle" class="md:hidden text-teal-900 focus:outline-none">
+            <svg class="w-8 h-8" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24"
+                stroke="currentColor">
+                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16m-7 6h7" />
+            </svg>
+        </button>
+
+        <!-- Navigation Links (Desktop & Mobile) -->
+        <ul id="nav-links" class="hidden md:flex md:space-x-8 text-teal-900 text-lg font-medium">
+            <li>
+                <a href="#services" class="text-teal-900 hover:text-teal-200 transition duration-300"
+                    onclick="closeMenu()">Services</a>
+            </li>
+            <li>
+                <a href="#proofreading" class="hover:text-teal-200 transition duration-300"
+                    onclick="closeMenu()">Proofreading</a>
+            </li>
+            <li>
+                <a href="#editing" class="hover:text-teal-200 transition duration-300" onclick="closeMenu()">Editing</a>
+            </li>
+            <li>
+                <a href="#contact" class="hover:text-teal-200 transition duration-300" onclick="closeMenu()">Contact</a>
+            </li>
+        </ul>
+    </nav>
+
+    <div class="relative h-[120vh] md:h-screen bg-cover bg-center" style="
+        background-image: url('/assets/images/typing-on-a-computer.jpeg');
+        background-position-y: 20%;
+      ">
+        <!-- Hero Content -->
+        <div class="absolute inset-0 bg-teal-900 bg-opacity-70 flex flex-col items-center text-center text-white p-6">
+            <h1 class="text-5xl font-bold md:mt-[120px]" data-aos="fade-right" data-aos-duration="2000">
+                Welcome to LCH Publications
+            </h1>
+            <p class="text-lg mt-4 max-w-2xl" data-aos="fade-left" data-aos-duration="2000">
+                Providing Excellence in Proofreading and Editing Services to help you
+                communicate your ideas with clarity and confidence.
+            </p>
+            <a href="#services"
+                class="relative mt-6 bg-white text-teal-900 font-bold py-3 px-6 rounded-full text-lg shadow-lg overflow-hidden group"
+                data-aos="zoom-in" data-aos-duration="3000">
+                <span
+                    class="absolute inset-0 bg-gradient-to-r from-teal-900 to-white transition-all duration-300 ease-in-out transform scale-x-0 origin-left group-hover:scale-x-100"></span>
+                <span class="relative z-10 group-hover:text-white transition-all duration-300">Explore Our
+                    Services</span>
+            </a>
+        </div>
+        <div class="absolute bottom-[250px] md:bottom-10 bg-white left-4 md:left-10 p-4 rounded-md">
+            <h6 class="text-xl md:text-2xl font-bold text-teal-700 mb-4">
+                Our Core Values
+            </h6>
+            <ul class="list-none space-y-3">
+                <li class="flex items-center text-xl text-gray-800">
+                    <i class="fas fa-check-circle text-teal-700 mr-2"></i>
+                    Excellence
+                </li>
+                <li class="flex items-center text-xl text-gray-800">
+                    <i class="fas fa-check-circle text-teal-700 mr-2"></i>
+                    Throughness
+                </li>
+                <li class="flex items-center text-xl text-gray-800">
+                    <i class="fas fa-check-circle text-teal-700 mr-2"></i>
+                    Completeness
+                </li>
+            </ul>
+        </div>
+        <!-- Hanging Image -->
+        <div class="absolute bottom-6 md:bottom-[-120px] z-30 right-6 p-4 bg-white bg-opacity-80 rounded-lg shadow-lg"
+            data-aos="zoom-in" data-aos-duration="3000">
+            <img src="/assets/images/document-proofreading.png" alt="Proofread Word Document"
+                class="h-48 md:h-[350px] w-auto rounded-md" />
+        </div>
+    </div>
+
+    <section class="bg-white p-6">
+        <div class="flex flex-col max-w-6xl mx-auto p-6" id="proofreading">
+            <!-- Proofreading Section -->
+            <div class="flex flex-col sm:flex-row items-center space-y-8 sm:space-y-0 gap-2 sm:gap-0 sm:space-x-8">
+                <div class="w-full sm:w-1/2" data-aos="fade-right" data-aos-duration="2000">
+                    <img src="/assets/images/profreading.jpg" alt="Proofreading"
+                        class="w-full h-[250px] md:h-[400px] object-fit rounded-lg shadow-md" />
+                </div>
+                <div class="w-full sm:w-1/2" data-aos="fade-left" data-aos-duration="2000">
+                    <h2 class="text-4xl font-semibold text-teal-700 mb-4 md:mt-8">
+                        Proofreading
+                    </h2>
+                    <p class="text-lg text-gray-600 mb-4">
+                        Our proofreading services focus on identifying and correcting
+                        grammatical, typographical, and formatting errors in your text. We
+                        ensure that your content is ready for publication or
+                        submission, without any overlooked mistakes.
+                    </p>
+                    <a href="#contact"
+                        class="relative bg-white text-teal-900 font-bold py-3 px-6 rounded-full text-lg border overflow-hidden group">
+                        <span
+                            class="absolute inset-0 rounded-full bg-gradient-to-r from-teal-900 to-white transition-all duration-300 ease-in-out transform scale-x-0 origin-left group-hover:scale-x-100"></span>
+                        <span
+                            class="relative z-10 group-hover:text-white group-hover:rounded-full transition-all duration-300">Get
+                            In Touch</span>
+                    </a>
+                </div>
+            </div>
+            <!-- Editing Section (Flex direction reversed) -->
+            <div class="flex flex-col sm:items-center space-y-8 gap-2 md:gap-0 sm:spaxe-y-8 sm:space-x-8 sm:flex-row-reverse mt-10 sm:mt-0"
+                id="editing">
+                <div class="w-full sm:w-1/2" data-aos="fade-left" data-aos-duration="2000">
+                    <img src="/assets/images/editing.jpg" alt="Editing"
+                        class="w-full h-[250px] md:h-[400px] object-fit rounded-lg shadow-md" />
+                </div>
+                <div class="w-full sm:w-1/2" data-aos="fade-right" data-aos-duration="2000">
+                    <h2 class="text-4xl font-semibold text-teal-700 mb-4">Editing</h2>
+                    <p class="text-lg text-gray-600 mb-4">
+                        Our Editing services focus on improving the overall flow of your
+                        writing. This includes reformatting, and the further development of and/or redevelopment of your
+                        content.
+                    </p>
+                    <a href="#contact"
+                        class="relative bg-white text-teal-900 font-bold py-3 px-6 rounded-full text-lg border overflow-hidden group">
+                        <span
+                            class="absolute inset-0 rounded-full bg-gradient-to-r from-teal-900 to-white transition-all duration-300 ease-in-out transform scale-x-0 origin-left group-hover:scale-x-100"></span>
+                        <span
+                            class="relative z-10 group-hover:text-white group-hover:rounded-full transition-all duration-300">Get
+                            In Touch</span>
+                    </a>
+                </div>
+            </div>
+        </div>
+    </section>
+    <section class="max-w-6xl mx-auto p-6 pb-0">
+        <!-- Extended Services -->
+        <section id="extension-services" class="max-w-6xl mx-auto">
+            <!-- Section Title -->
+            <h2 class="text-4xl font-semibold text-teal-700 text-center mb-8" data-aos="fade-right"
+                data-aos-duration="2000">
+                Extension of Services
+            </h2>
+            <p class="text-xl text-gray-600 mb-10" data-aos="fade-left" data-aos-duration="2000">
+                Our Proofreading and Editing Services extend to and include newsletters, presentations, documents, numerical files, data entry procedural & maintenance flow.
+            </p>
+            <!-- Cards -->
+            <div class="grid grid-cols-1 sm:grid-cols-3 md:grid-cols-4 gap-4 mb-16 mx-auto">
+                <!-- Card 1: Newsletters -->
+                <div class="p-6 bg-white shadow-md rounded-lg transform transition hover:scale-105 hover:shadow-lg"
+                    data-aos="fade-right" data-aos-duration="2000">
+                    <div class="text-teal-700 mb-4">
+                        <i class="fas fa-envelope text-3xl"></i>
+                    </div>
+                    <h3 class="text-lg font-semibold mb-2">Newsletters</h3>
+                    <p class="text-gray-600 text-sm">
+                        Professionally polished newsletters tailored for your audience.
+                    </p>
+                </div>
+                <!-- Card 2: Presentations -->
+                <div class="p-6 bg-white shadow-md rounded-lg transform transition hover:scale-105 hover:shadow-lg"
+                    data-aos="fade-up" data-aos-duration="800">
+                    <div class="text-teal-700 mb-4">
+                        <i class="fa-solid fa-file-powerpoint text-3xl"></i>
+                    </div>
+                    <h3 class="text-lg font-semibold mb-2">Presentations</h3>
+                    <p class="text-gray-600 text-sm">
+                        Effective and visually appealing presentations for your business
+                        needs.
+                    </p>
+                </div>
+                <!-- Card 3: Documents -->
+                <div class="p-6 bg-white shadow-md rounded-lg transform transition hover:scale-105 hover:shadow-lg"
+                    data-aos="fade-up" data-aos-duration="800">
+                    <div class="text-teal-700 mb-4">
+                        <i class="fa-solid fa-file-alt text-3xl"></i>
+                    </div>
+                    <h3 class="text-lg font-semibold mb-2">Documents</h3>
+                    <p class="text-gray-600 text-sm">
+                        High-quality documents prepared for professional use.
+                    </p>
+                </div>
+                <!-- Card 4: Numerical Files -->
+                <div class="p-6 bg-white shadow-md rounded-lg transform transition hover:scale-105 hover:shadow-lg"
+                    data-aos="fade-up" data-aos-duration="800">
+                    <div class="text-teal-700 mb-4">
+                        <i class="fa-solid fa-file-excel text-3xl"></i>
+                    </div>
+                    <h3 class="text-lg font-semibold mb-2">Numerical Files</h3>
+                    <p class="text-gray-600 text-sm">
+                        Accurate and reliable numerical data files for various purposes.
+                    </p>
+                </div>
+                <!-- Card 5: Data Entry -->
+                <div class="p-6 bg-white shadow-md rounded-lg transform transition hover:scale-105 hover:shadow-lg"
+                    data-aos="fade-up" data-aos-duration="800">
+                    <div class="text-teal-700 mb-4">
+                        <i class="fa-solid fa-keyboard text-3xl"></i>
+                    </div>
+                    <h3 class="text-lg font-semibold mb-2">Data Entry</h3>
+                    <p class="text-gray-600 text-sm">
+                        Efficient data entry services to streamline your operations.
+                    </p>
+                </div>
+                <!-- Card 6: Maintenance Flow -->
+                <div class="p-6 bg-white shadow-md rounded-lg transform transition hover:scale-105 hover:shadow-lg"
+                    data-aos="fade-up">
+                    <div class="text-teal-700 mb-4">
+                        <i class="fa-solid fa-cogs text-3xl"></i>
+                    </div>
+                    <h3 class="text-lg font-semibold mb-2">Maintenance Flow</h3>
+                    <p class="text-gray-600 text-sm">
+                        Comprehensive procedural and maintenance flow documentation.
+                    </p>
+                </div>
+                <div class="md:col-span-2 bg-white shadow-md transform transition hover:scale-105 hover:shadow-lg rounded-lg flex items-center justify-center p-6"
+                    data-aos="zoom-in" data-aos-duration="800">
+                    <p class="text-xl font-normal text-gray-600 text-center" data-aos="fade-left"
+                        data-aos-duration="2000">
+                        All Our services are available for B2B, Contractual, and Personal
+                        Clientele. We are committed to providing you with the best
+                        services to meet your needs.
+                    </p>
+                </div>
+            </div>
+        </section>
+    </section>
+    <section id="services" class="bg-white p-6">
+        <section class="max-w-5xl mx-auto mb-10">
+            <!-- Section Title -->
+            <h2 class="text-4xl font-semibold text-teal-700 text-center mb-10" data-aos="fade-right"
+                data-aos-duration="2000">
+                What We Offer
+            </h2>
+            <!-- Main Services -->
+            <div class="grid grid-cols-1 md:grid-cols-5 gap-4">
+                <!-- Service List -->
+                <div class="col-span-2">
+                    <ul>
+                        <li class="service-item flex items-center space-x-4 px-4 py-2 rounded-lg cursor-pointer transition transform hover:translate-x-4 hover:text-teal-500 text-gray-200 text-xl md:text-3xl"
+                            data-service="content-editing">
+                            <i class="fas fa-edit"></i>
+                            <span class="font-normal">Content Editing</span>
+                        </li>
+                        <li class="service-item flex items-center space-x-4 px-4 py-2 rounded-lg cursor-pointer transition transform hover:translate-x-4 hover:text-teal-500 text-gray-200 text-xl md:text-3xl"
+                            data-service="ghost-writing">
+                            <i class="fas fa-pen-nib"></i>
+                            <span class="font-normal">Ghost Writing</span>
+                        </li>
+                        <li class="service-item flex items-center space-x-4 px-4 py-2 rounded-lg cursor-pointer transition transform hover:translate-x-4 hover:text-teal-500 text-gray-200 text-xl md:text-3xl"
+                            data-service="scripts-manuscripts">
+                            <i class="fas fa-film"></i>
+                            <span class="font-normal">Scripts & Manuscripts</span>
+                        </li>
+                        <li class="service-item flex items-center space-x-4 px-4 py-2 rounded-lg cursor-pointer transition transform hover:translate-x-4 hover:text-teal-500 text-gray-200 text-xl md:text-3xl"
+                            data-service="developmental-editing">
+                            <i class="fas fa-cogs"></i>
+                            <span class="font-normal">Developmental Editing</span>
+                        </li>
+                        <li class="service-item flex items-center space-x-4 px-4 py-2 rounded-lg cursor-pointer transition transform hover:translate-x-4 hover:text-teal-500 text-gray-200 text-xl md:text-3xl"
+                            data-service="line-editing">
+                            <i class="fas fa-pencil-alt"></i>
+                            <span class="font-normal">Line Editing</span>
+                        </li>
+                        <li class="service-item flex items-center space-x-4 px-4 py-2 rounded-lg cursor-pointer transition transform hover:translate-x-4 hover:text-teal-500 text-gray-200 text-xl md:text-3xl"
+                            data-service="copy-editing">
+                            <i class="fas fa-copy"></i>
+                            <span class="font-normal">Copy Editing</span>
+                        </li>
+                    </ul>
+                </div>
+
+                <!-- Service Description -->
+                <div class="col-span-3" data-aos="fade-left" data-aos-duration="3000">
+                    <div id="service-description" class="">
+                        <h6 class="text-3xl font-normal text-teal-700 mb-4">
+                            Select a Service
+                        </h6>
+                        <p class="text-gray-600">
+                            Click on a service from the list to view its description.
+                        </p>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </section>
+
+    <section id="contact" class="p-6">
+        <section class="max-w-4xl mx-auto my-10 p-6 bg-white shadow-lg rounded-lg">
+            <h2 class="text-2xl font-semibold text-teal-700">Contact Us</h2>
+            <p class="mt-4 text-lg">
+                Have a question or need our services? Fill out the form below:
+            </p>
+            <form id="contact-form" class="mt-4">
+                <div class="mb-4">
+                    <label class="block text-gray-700 text-sm font-bold mb-2" for="name">Name</label>
+                    <input
+                        class="border border-teal-700 rounded w-full py-2 px-3 text-gray-700 focus:outline-none focus:border-teal-800"
+                        id="name" type="text" placeholder="Your Name" required />
+                </div>
+                <div class="mb-4">
+                    <label class="block text-gray-700 text-sm font-bold mb-2" for="email">Email</label>
+                    <input
+                        class="border border-teal-700 rounded w-full py-2 px-3 text-gray-700 focus:outline-none focus:border-teal-800"
+                        id="email" type="email" placeholder="Your Email" required />
+                </div>
+                <div class="mb-4">
+                    <label class="block text-gray-700 text-sm font-bold mb-2" for="message">Message</label>
+                    <textarea
+                        class="border border-teal-700 rounded w-full py-2 px-3 text-gray-700 focus:outline-none focus:border-teal-800"
+                        id="message" placeholder="Your Message" rows="4" required></textarea>
+                </div>
+                <button
+                    class="bg-teal-700 hover:bg-teal-800 text-white font-bold py-2 px-4 rounded focus:outline-none focus:shadow-outline"
+                    type="submit">
+                    Send Message
+                </button>
+            </form>
+            <p id="form-response" class="mt-4 text-lg text-red-500"></p>
+        </section>
+    </section>
+
+    <!-- Footer Section -->
+    <footer class="bg-teal-900 text-white py-6 mt-10">
+        <div class="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="flex  flex-col md:flex-row justify-between items-center">
+                <div class="mb-4 md:mb-0 text-center md:text-left flex flex-col items-center md:items-start">
+                    <div class="bg-white p-2 rounded-full">
+                        <img src="/assets/lch-publications-log-removebg.png" alt="LCH Publications Logo"
+                            class="h-28 w-a rounded-full object-fit" />
+                    </div>
+                    <h4 class="text-2xl font-bold mt-2">LCH Publications</h4>
+                    <p class="text-sm">
+                        Your trusted partner in proofreading and editing.
+                    </p>
+                </div>
+                <div>
+                    <p class="text-sm mt-2">LO950 Arrow Route #2783</p>
+                    <p class="text-sm">Rancho Cucamonga, CA 1729</p>
+                    </p>
+                </div>
+                <div>
+                    <p class="text-lg mt-2">
+                        Email:
+                        <a href="mailto:Inquiry@LCLPublications.com"
+                            class="text-teal-200 hover:underline">Inquiry@LCLPublications.com</a>
+                    </p>
+                    <p class="text-lg">
+                        Phone:
+                        <a href="tel:9098330158" class="text-teal-200 hover:underline">909 833 0158</a>
+                </div>
+            </div>
+        </div>
+        <div class="mt-4 flex justify-center text-center md:text-left">
+            <p class="text-sm">
+                &copy; 2024 LCH Publications. All rights reserved.
+            </p>
+        </div>
+        <button id="scrollToTop"
+            class="hidden fixed bottom-6 right-6 bg-teal-700 text-white h-12 w-12 border border-white flex items-center justify-center p-3 rounded-full shadow-lg transition-opacity duration-300 hover:bg-teal-400">
+            <i class="fa-solid fa-arrow-up-long"></i>
+        </button>
+    </footer>
+
+    <script src="/js/index.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/emailjs-com@2/dist/email.min.js"></script>
+    <script>
+        document.addEventListener("DOMContentLoaded", function () {
+            AOS.init();
+        });
+        (function () {
+            emailjs.init("KehPQQgwKRR6ja30g");
+        })();
+
+        document
+            .getElementById("contact-form")
+            .addEventListener("submit", function (event) {
+                event.preventDefault();
+
+                const form = event.target;
+                const formData = {
+                    name: form.name.value,
+                    email: form.email.value,
+                    message: form.message.value,
+                };
+
+                emailjs
+                    .send("service_n4q3cem", "template_niqb61f", formData)
+                    .then(() => {
+                        const rensponseEl = document.getElementById("form-response");
+                        rensponseEl.innerText = "Message sent successfully!";
+                        rensponseEl.classList.remove("text-red-500");
+                        rensponseEl.classList.add("text-green-500");
+
+                        form.reset();
+                    })
+                    .catch(() => {
+                        const rensponseEl = document.getElementById("form-response");
+                        rensponseEl.innerText = "Failed to send message. Try again later.";
+                        rensponseEl.classList.remove("text-green-500");
+                        rensponseEl.classList.add("text-red-500");
+                        form.reset();
+                    });
+            });
+
+        // Toggle Menu Visibility
+        document.getElementById('menu-toggle').addEventListener('click', function () {
+            const navLinks = document.getElementById('nav-links');
+            navLinks.classList.toggle('mobile-menu');
+            navLinks.classList.toggle('hidden');
+
+        });
+
+        function closeMenu() {
+            const navLinks = document.getElementById('nav-links');
+            navLinks.classList.add('hidden');
+            navLinks.classList.remove('mobile-menu');
+        }
+
+        // Scroll to top
+        const scrollToTopBtn = document.getElementById("scrollToTop");
+
+        window.addEventListener("scroll", () => {
+            if (window.scrollY > 300) {
+                scrollToTopBtn.classList.remove("hidden");
+                scrollToTopBtn.classList.add("opacity-100");
+            } else {
+                scrollToTopBtn.classList.add("hidden");
+                scrollToTopBtn.classList.remove("opacity-100");
+            }
+        });
+
+        scrollToTopBtn.addEventListener("click", () => {
+            window.scrollTo({
+                top: 0,
+                behavior: "smooth"
+            });
+        });
+
+
+    </script>
+</body>
+
+</html>
