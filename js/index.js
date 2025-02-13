@@ -5,7 +5,7 @@ const serviceDetails = {
     "content-editing": {
         title: "Content Editing",
         description:
-            "Content editing focuses on refining and restructuring your content to ensure clarity, coherence, and impactful communication. This includes grammar checking, sentence structure adjustments, and improving overall readability.",
+            "Content Editing focuses on refining and restructuring your content to ensure clarity, coherence, and impactful communication. This includes grammar checking, sentence structure adjustments, and improving overall readability.",
     },
     "ghost-writing": {
         title: "Ghost Writing",
@@ -20,17 +20,17 @@ const serviceDetails = {
     "developmental-editing": {
         title: "Developmental Editing",
         description:
-            "Developmental editing takes your manuscript from good to great by refining structure, narrative arcs, pacing, and character development. This process helps you create a well-rounded and compelling story.",
+            "Developmental Editing takes your manuscript from good to great by refining structure, narrative arcs, pacing, and character development. This process helps you create a well-rounded and compelling story.",
     },
     "line-editing": {
         title: "Line Editing",
         description:
-            "Line editing focuses on sentence-level revisions to enhance clarity, tone, and flow. It involves refining sentence structure, word choice, and the overall reading experience.",
+            "Line Editing focuses on sentence-level revisions to enhance clarity, tone, and flow. It involves refining sentence structure, word choice, and the overall reading experience.",
     },
     "copy-editing": {
         title: "Copy Editing",
         description:
-            "Copy editing ensures that your content is polished and error-free. It includes grammar checks, spelling, punctuation, and style consistency to maintain a professional tone throughout.",
+            "Copy Editing ensures that your content is polished and includes grammar checks, spelling, punctuation, and style consistency to maintain a professional tone throughout.",
     },
 };
 
